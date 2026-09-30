@@ -2176,32 +2176,20 @@ a {
 
 
 /* =========================================================
-   CUSTOMIZER MOBILE — SCROLL FIX
+   CUSTOMIZER MOBILE — COMPACT
    ========================================================= */
 
 @media (max-width: 700px) {
 
     .customizer-overlay {
-        position: fixed;
-        inset: 0;
-
-        padding: 10px;
-
-        display: flex;
-        align-items: flex-start;
+        padding: 8px;
+        align-items: center;
         justify-content: center;
-
-        overflow-y: auto;
-        overflow-x: hidden;
-
-        -webkit-overflow-scrolling: touch;
-        touch-action: pan-y;
     }
 
     .customizer-modal {
         width: 100%;
-        height: 94vh;
-        max-height: 94vh;
+        max-height: 96vh;
 
         display: flex;
         flex-direction: column;
@@ -2209,55 +2197,133 @@ a {
         overflow-y: auto;
         overflow-x: hidden;
 
-        -webkit-overflow-scrolling: touch;
-        touch-action: pan-y;
-
-        border-radius: 22px;
+        border-radius: 18px;
     }
 
+    /* SMALLER PIZZA IMAGE */
     .customizer-image {
         flex-shrink: 0;
 
-        min-height: 210px;
-        height: 210px;
+        min-height: 125px;
+        height: 125px;
 
-        padding: 20px;
-
-        overflow: hidden;
+        padding: 10px;
     }
 
     .customizer-image img {
         width: 100%;
         height: 100%;
 
-        max-height: 180px;
+        max-height: 110px;
 
         object-fit: cover;
+        border-radius: 12px;
     }
 
+    /* COMPACT CONTENT */
     .customizer-content {
-        flex: 0 0 auto;
-
-        padding: 25px 20px;
+        padding: 15px 16px 20px;
 
         overflow: visible;
-        min-height: auto;
     }
 
     .customizer-content h2 {
-        font-size: 25px;
+        margin-top: 4px;
+        font-size: 21px;
+        letter-spacing: -0.8px;
     }
 
+    .customizer-description {
+        font-size: 10px;
+        margin-top: 3px;
+    }
+
+    /* LESS SPACE BETWEEN SECTIONS */
+    .customizer-section {
+        margin-top: 14px;
+    }
+
+    .customizer-section h3 {
+        margin-bottom: 7px;
+        font-size: 12px;
+    }
+
+    /* SMALLER SIZE / CRUST CARDS */
     .option-grid {
         grid-template-columns: 1fr 1fr;
+        gap: 6px;
+    }
+
+    .option-card {
+        min-height: 55px;
+        padding: 8px;
+        border-radius: 8px;
+    }
+
+    .option-card strong {
+        font-size: 10px;
+    }
+
+    .option-card small {
+        font-size: 8px;
+    }
+
+    .option-card b {
+        margin-top: 4px;
+        font-size: 8px;
     }
 
     .option-grid .option-card:last-child {
         grid-column: span 2;
     }
 
+    /* TOPPINGS */
+    .topping-list {
+        gap: 5px;
+    }
+
+    .topping-option {
+        padding: 8px 10px;
+        min-height: 34px;
+        font-size: 10px;
+        border-radius: 7px;
+    }
+
+    .topping-option b {
+        font-size: 9px;
+    }
+
+    /* QUANTITY / TOTAL */
     .customizer-bottom {
+        margin-top: 15px;
+        padding-top: 12px;
         align-items: center;
+    }
+
+    .quantity-label {
+        margin-bottom: 4px;
+        font-size: 9px;
+    }
+
+    .customizer-quantity {
+        gap: 8px;
+    }
+
+    .customizer-quantity button {
+        width: 27px;
+        height: 27px;
+    }
+
+    .customizer-total strong {
+        font-size: 19px;
+    }
+
+    /* ADD BUTTON */
+    .customizer-add {
+        height: 45px;
+        margin-top: 12px;
+        border-radius: 9px;
+        font-size: 11px;
     }
 }
 /* =========================================================

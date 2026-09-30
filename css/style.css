@@ -2176,45 +2176,72 @@ a {
 
 
 /* =========================================================
-   CUSTOMIZER MOBILE
+   CUSTOMIZER MOBILE — SCROLL FIX
    ========================================================= */
 
 @media (max-width: 700px) {
 
     .customizer-overlay {
+        position: fixed;
+        inset: 0;
+
         padding: 10px;
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-y;
     }
 
-   .customizer-modal {
-    width: 100%;
-    max-height: 94vh;
-    grid-template-columns: 1fr;
+    .customizer-modal {
+        width: 100%;
+        height: 94vh;
+        max-height: 94vh;
 
-    overflow-y: auto;
-    overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
 
-    -webkit-overflow-scrolling: touch;
-}
-.customizer-content {
-    overflow: visible;
-}
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-y;
+
+        border-radius: 22px;
+    }
 
     .customizer-image {
-        min-height: 210px;
+        flex-shrink: 0;
 
+        min-height: 210px;
         height: 210px;
 
         padding: 20px;
+
+        overflow: hidden;
     }
 
     .customizer-image img {
+        width: 100%;
+        height: 100%;
+
         max-height: 180px;
 
         object-fit: cover;
     }
 
     .customizer-content {
+        flex: 0 0 auto;
+
         padding: 25px 20px;
+
+        overflow: visible;
+        min-height: auto;
     }
 
     .customizer-content h2 {
@@ -2232,27 +2259,6 @@ a {
     .customizer-bottom {
         align-items: center;
     }
-}
-.cart-item-image {
-    width: 62px;
-    height: 62px;
-
-    flex-shrink: 0;
-
-    overflow: hidden;
-
-    border-radius: 12px;
-
-    background: var(--light-red);
-}
-
-.cart-item-image img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
 }
 /* =========================================================
    CHECKOUT PAGE

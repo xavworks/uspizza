@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Checkout | US Pizza</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-mark">🍕</span>
+
+            <span>
+                US <strong>PIZZA</strong>
+            </span>
+
+        </a>
+
+
+        <div class="checkout-nav">
+
+            <i class="fa-solid fa-lock"></i>
+
+            Secure Checkout
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- ================= CHECKOUT ================= -->
+
+<main class="checkout-page">
+
+
+    <div class="checkout-container">
+
+
+        <!-- LEFT -->
+
+        <section class="checkout-main">
+
+
+            <div class="checkout-title">
+
+                <span class="section-label">
+                    ORDER
+                </span>
+
+                <h1>
+                    Checkout
+                </h1>
+
+                <p>
+                    Almost there. Complete your order below.
+                </p>
+
+            </div>
+
+
+
+            <!-- ORDER TYPE -->
+
+            <div class="checkout-card">
+
+                <div class="checkout-card-title">
+
+                    <div>
+
+                        <span class="checkout-icon">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Order Type
+                            </h2>
+
+                            <p>
+                                How would you like to receive your order?
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="order-type">
+
+                    <label class="order-type-option">
+
+                        <input
+                            type="radio"
+                            name="orderType"
+                            value="delivery"
+                            checked
+                        >
+
+                        <span>
+
+                            <i class="fa-solid fa-motorcycle"></i>
+
+                            <strong>
+                                Delivery
+                            </strong>
+
+                            <small>
+                                Delivered to your door
+                            </small>
+
+                        </span>
+
+                    </label>
+
+
+                    <label class="order-type-option">
+
+                        <input
+                            type="radio"
+                            name="orderType"
+                            value="pickup"
+                        >
+
+                        <span>
+
+                            <i class="fa-solid fa-store"></i>
+
+                            <strong>
+                                Pickup
+                            </strong>
+
+                            <small>
+                                Collect from store
+                            </small>
+
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CUSTOMER DETAILS -->
+
+            <div class="checkout-card">
+
+                <div class="checkout-card-title">
+
+                    <div>
+
+                        <span class="checkout-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Contact Details
+                            </h2>
+
+                            <p>
+                                We'll use these details for your order.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="customerName"
+                            placeholder="Your name"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="customerPhone"
+                            placeholder="01X-XXXXXXX"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label>
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="customerEmail"
+                            placeholder="you@example.com"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ADDRESS -->
+
+<div class="checkout-card" id="deliveryAddress">
+
+    <div class="checkout-card-title">
+
+        <div>
+
+            <span class="checkout-icon">
+                <i class="fa-solid fa-location-dot"></i>
+            </span>
+
+            <div>
+                <h2>Delivery Address</h2>
+
+                <p>
+                    Where should we deliver your pizza?
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="form-grid">
+
+                    <div class="form-group full">
+
+                        <label>
+                            Address
+                        </label>
+
+                        <input
+                            type="text"
+                            id="address"
+                            placeholder="House number, street name"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            City
+                        </label>
+
+                        <input
+                            type="text"
+                            id="city"
+                            placeholder="City"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Postcode
+                        </label>
+
+                        <input
+                            type="text"
+                            id="postcode"
+                            placeholder="00000"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label>
+                            Delivery Notes
+                        </label>
+
+                        <textarea
+                            id="deliveryNotes"
+                            placeholder="Anything the rider should know?"
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PAYMENT -->
+
+            <div class="checkout-card">
+
+                <div class="checkout-card-title">
+
+                    <div>
+
+                        <span class="checkout-icon">
+                            <i class="fa-solid fa-credit-card"></i>
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Payment
+                            </h2>
+
+                            <p>
+                                Choose your payment method.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="payment-options">
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="payment"
+                            value="card"
+                            checked
+                        >
+
+                        <span>
+
+                            <i class="fa-solid fa-credit-card"></i>
+
+                            <strong>
+                                Card
+                            </strong>
+
+                            <small>
+                                Visa / Mastercard
+                            </small>
+
+                        </span>
+
+                    </label>
+
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="payment"
+                            value="online"
+                        >
+
+                        <span>
+
+                            <i class="fa-solid fa-building-columns"></i>
+
+                            <strong>
+                                Online Banking
+                            </strong>
+
+                            <small>
+                                FPX
+                            </small>
+
+                        </span>
+
+                    </label>
+
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="payment"
+                            value="cash"
+                        >
+
+                        <span>
+
+                            <i class="fa-solid fa-money-bill"></i>
+
+                            <strong>
+                                Cash
+                            </strong>
+
+                            <small>
+                                Pay on delivery
+                            </small>
+
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- RIGHT -->
+
+        <aside class="checkout-summary">
+
+
+            <div class="summary-card">
+
+                <div class="summary-header">
+
+                    <h2>
+                        Your Order
+                    </h2>
+
+                    <span id="summaryItemCount">
+                        0 items
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="checkout-items"
+                    id="checkoutItems"
+                >
+
+                    <div class="checkout-empty">
+
+                        <span>🛒</span>
+
+                        <p>
+                            Your cart is empty.
+                        </p>
+
+                        <a href="index.html#menu">
+                            Browse Menu
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-lines">
+
+                    <div>
+
+                        <span>
+                            Subtotal
+                        </span>
+
+                        <strong id="checkoutSubtotal">
+                            RM 0.00
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Delivery
+                        </span>
+
+                        <strong id="checkoutDelivery">
+                            RM 0.00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="checkoutTotal">
+                        RM 0.00
+                    </strong>
+
+                </div>
+
+
+                <button
+                    class="place-order-btn"
+                    id="placeOrder"
+                >
+
+                    Place Order
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+
+                <div class="secure-message">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    Secure checkout
+
+                </div>
+
+            </div>
+
+
+        </aside>
+
+
+    </div>
+
+</main>
+
+<!-- ================= ORDER SUCCESS ================= -->
+
+<div
+    class="order-success-overlay"
+    id="orderSuccess"
+>
+
+    <div class="order-success-card">
+
+        <div class="success-icon">
+            <i class="fa-solid fa-check"></i>
+        </div>
+
+
+        <span class="success-label">
+            ORDER CONFIRMED
+        </span>
+
+
+        <h1>
+            Your Pizza Is On The Way! 🍕
+        </h1>
+
+
+        <p class="success-message">
+            Thanks, <strong id="successCustomerName">Xavier</strong>!
+            Your order has been received and is being prepared.
+        </p>
+
+
+        <div class="success-order-number">
+
+            <span>
+                Order Number
+            </span>
+
+            <strong id="successOrderNumber">
+                #US00000
+            </strong>
+
+        </div>
+
+
+        <div
+            class="success-items"
+            id="successOrderItems"
+        >
+            <!-- Order items will appear here -->
+        </div>
+
+
+        <div class="success-total">
+
+            <span>
+                Total
+            </span>
+
+            <strong id="successOrderTotal">
+                RM 0.00
+            </strong>
+
+        </div>
+
+
+        <div class="success-info">
+
+            <div>
+
+                <i class="fa-solid fa-truck"></i>
+
+                <span id="successOrderType">
+                    Delivery
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <i class="fa-regular fa-clock"></i>
+
+                <span id="successEstimate">
+                    Estimated delivery: 30–45 minutes
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="success-actions">
+
+            <a
+                href="orders.html"
+                class="success-orders-btn"
+            >
+                <i class="fa-solid fa-box"></i>
+                View My Orders
+            </a>
+
+
+            <a
+                href="index.html"
+                class="success-home-btn"
+            >
+                Back to Home
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= ORDER SUCCESS ================= -->
+
+<div class="order-success-overlay" id="orderSuccess">
+
+    <div class="order-success-card">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <h2>Order Confirmed!</h2>
+
+        <p class="success-message">
+            Thank you for your order!
+        </p>
+
+        <div class="order-number">
+            Order <strong id="successOrderNumber">#US00000</strong>
+        </div>
+
+        <div class="success-order-details" id="successOrderDetails">
+            <!-- Order items will appear here -->
+        </div>
+
+        <div class="success-total">
+            <span>Total</span>
+            <strong id="successOrderTotal">RM 0.00</strong>
+        </div>
+
+        <div class="delivery-estimate">
+
+            <strong id="successOrderType">
+                Estimated delivery
+            </strong>
+
+            <span id="successEstimate">
+                30–45 minutes
+            </span>
+
+        </div>
+
+        <button
+            class="back-home-btn"
+            id="backHome"
+            type="button"
+        >
+            Back to Home
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="js/checkout.js"></script>
+
+</body>
+</html>

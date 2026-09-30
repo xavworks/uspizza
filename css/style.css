@@ -2185,11 +2185,19 @@ a {
         padding: 10px;
     }
 
-    .customizer-modal {
-        max-height: 94vh;
+   .customizer-modal {
+    width: 100%;
+    max-height: 94vh;
+    grid-template-columns: 1fr;
 
-        grid-template-columns: 1fr;
-    }
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    -webkit-overflow-scrolling: touch;
+}
+.customizer-content {
+    overflow: visible;
+}
 
     .customizer-image {
         min-height: 210px;

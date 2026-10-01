@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>US Pizza | Fresh. Hot. Delicious.</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                <span class="logo-mark">🍕</span>
+                <span>US <strong>PIZZA</strong></span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#deals">Deals</a>
+                <a href="#ai-finder">AI Finder</a>
+            </nav>
+
+            <div class="nav-actions">
+
+                <div class="account-wrapper">
+
+    <a href="login.html" class="login-btn">
+        <i class="fa-regular fa-user"></i>
+        Login
+    </a>
+
+    <div class="account-dropdown" id="accountDropdown">
+
+        <div class="account-header">
+
+            <div class="account-avatar">
+                <i class="fa-regular fa-user"></i>
+            </div>
+
+            <div>
+                <strong id="accountName">
+                    Xavier
+                </strong>
+
+                <span id="accountEmail">
+                    user@example.com
+                </span>
+            </div>
+
+        </div>
+
+
+        <div class="account-divider"></div>
+
+
+        <a href="#" class="account-item">
+            <i class="fa-regular fa-user"></i>
+            My Account
+        </a>
+
+
+        <a href="orders.html" class="account-item">
+    <i class="fa-solid fa-box"></i>
+    My Orders
+</a>
+
+
+        <button
+            type="button"
+            class="account-item account-logout"
+            id="logoutButton"
+        >
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </button>
+
+    </div>
+
+</div>
+
+                <button class="cart-btn" id="cartButton">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MOBILE MENU ================= -->
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#deals">Deals</a>
+        <a href="#ai-finder">AI Finder</a>
+
+        <a href="login.html" class="mobile-login">
+            Login / Register
+        </a>
+
+    </div>
+
+
+    <!-- ================= HERO ================= -->
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    🔥 FRESH FROM THE OVEN
+                </span>
+
+                <h1>
+                    YOUR CRAVING.
+                    <span>OUR PIZZA.</span>
+                </h1>
+
+                <p>
+                    Hot, cheesy and loaded with flavour.
+                    Find your perfect pizza and get it delivered straight to your door.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#menu" class="primary-btn">
+                        Order Now
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <a href="#ai-finder" class="secondary-btn">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        Ask AI
+                    </a>
+
+                </div>
+
+                <div class="hero-info">
+
+                    <div>
+                        <strong>30+</strong>
+                        <span>Pizza Choices</span>
+                    </div>
+
+                    <div>
+                        <strong>15+</strong>
+                        <span>Years of Taste</span>
+                    </div>
+
+                    <div>
+                        <strong>4.8★</strong>
+                        <span>Customer Rating</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-visual">
+
+                <div class="hero-circle"></div>
+
+<div class="hero-pizza">
+    <img src="images/hero-pizza.jpg" alt="Fresh hot pizza">
+</div>
+
+                <div class="floating-card card-one">
+                    <i class="fa-solid fa-fire"></i>
+                    <div>
+                        <strong>Fresh & Hot</strong>
+                        <span>Made to order</span>
+                    </div>
+                </div>
+
+                <div class="floating-card card-two">
+                    <i class="fa-solid fa-star"></i>
+                    <div>
+                        <strong>Customer Favourite</strong>
+                        <span>Chicken Supreme</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= AI FOOD FINDER ================= -->
+        <section class="ai-section" id="ai-finder">
+
+            <div class="ai-container">
+
+                <div class="ai-heading">
+
+                    <span class="section-label">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        SMART FOOD FINDER
+                    </span>
+
+                    <h2>
+                        Don't know what to eat?
+                    </h2>
+
+                    <p>
+                        Tell our AI what you're craving and we'll find something for you.
+                    </p>
+
+                </div>
+
+
+                <div class="ai-box">
+
+                    <div class="ai-top">
+
+                        <div class="ai-avatar">
+                            ✨
+                        </div>
+
+                        <div>
+                            <strong>US Pizza AI</strong>
+                            <span>Online • Ready to help</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="ai-message">
+
+                        <div class="ai-bubble">
+                            👋 Hey! What are you craving today?
+                        </div>
+
+                        <div class="suggestions">
+
+                            <button class="suggestion">
+                                🌶️ Something spicy
+                            </button>
+
+                            <button class="suggestion">
+                                🧀 Something cheesy
+                            </button>
+
+                            <button class="suggestion">
+                                🍗 Chicken
+                            </button>
+
+                            <button class="suggestion">
+                                💰 Under RM30
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ai-input">
+
+                        <input
+                            type="text"
+                            id="aiInput"
+                            placeholder="e.g. I want something spicy with chicken..."
+                        >
+
+                        <button id="aiSend">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CATEGORIES ================= -->
+        <section class="categories">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="section-label">EXPLORE</span>
+                        <h2>What are you craving?</h2>
+                    </div>
+
+                    <a href="#menu" class="view-all">
+                        View Menu
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="category-grid">
+
+                    <button class="category-card active">
+                        <span>🍕</span>
+                        <strong>Pizza</strong>
+                    </button>
+
+                    <button class="category-card">
+                        <span>🍗</span>
+                        <strong>Chicken</strong>
+                    </button>
+
+                    <button class="category-card">
+                        <span>🍝</span>
+                        <strong>Pasta</strong>
+                    </button>
+
+                    <button class="category-card">
+                        <span>🍟</span>
+                        <strong>Sides</strong>
+                    </button>
+
+                    <button class="category-card">
+                        <span>🥤</span>
+                        <strong>Drinks</strong>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MENU ================= -->
+        <section class="menu-section" id="menu">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="section-label">OUR MENU</span>
+                        <h2>Popular Picks</h2>
+                    </div>
+
+                    <a href="#" class="view-all">
+                        See All
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="product-grid" id="productGrid">
+
+                    <!-- PRODUCT 1 -->
+                    <article class="product-card">
+
+                        <div class="product-image">
+                            <span class="popular-badge">POPULAR</span>
+                         <div class="pizza-placeholder">
+    <img src="images/chicken-supreme.jpg" alt="Chicken Supreme Pizza">
+</div>
+                            <button class="heart-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="product-info">
+
+                            <div class="rating">
+                                ★★★★★
+                                <span>(128)</span>
+                            </div>
+
+                            <h3>Chicken Supreme</h3>
+
+                            <p>
+                                Juicy chicken, mushrooms, onions,
+                                capsicum and mozzarella.
+                            </p>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    From RM 24.90
+                                </strong>
+
+                                <button
+                                   class="add-cart-btn"
+                                   data-product="Chicken Supreme"
+                                   data-price="24.90"
+                                   data-category="Pizza"
+                                >
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCT 2 -->
+                    <article class="product-card">
+
+                        <div class="product-image">
+                           <div class="pizza-placeholder">
+    <img src="images/pepperoni.jpg" alt="Beef Pepperoni Pizza">
+</div>
+
+                            <button class="heart-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="product-info">
+
+                            <div class="rating">
+                                ★★★★★
+                                <span>(96)</span>
+                            </div>
+
+                            <h3>Beef Pepperoni</h3>
+
+                            <p>
+                                Loaded with beef pepperoni,
+                                mozzarella and rich tomato sauce.
+                            </p>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    From RM 22.90
+                                </strong>
+
+                                <button
+                                    class="add-cart-btn"
+                                    data-product="Beef Pepperoni"
+                                    data-price="22.90"
+                                    data-category="Pizza"
+                                >
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCT 3 -->
+                    <article class="product-card">
+
+                        <div class="product-image">
+                            <span class="spicy-badge">🌶️ SPICY</span>
+                            <div class="pizza-placeholder">
+    <img src="images/spicy-chicken.jpg" alt="Spicy Chicken Pizza">
+</div>
+                            <button class="heart-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="product-info">
+
+                            <div class="rating">
+                                ★★★★★
+                                <span>(84)</span>
+                            </div>
+
+                            <h3>Spicy Chicken</h3>
+
+                            <p>
+                                Spicy chicken, jalapeños,
+                                onions and extra cheese.
+                            </p>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    From RM 27.90
+                                </strong>
+
+                                <button
+                                    class="add-cart-btn"
+                                    data-product="Spicy Chicken"
+                                    data-price="27.90"
+                                    data-category="Pizza"
+                                >
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCT 4 -->
+                    <article class="product-card">
+
+                        <div class="product-image">
+                           <div class="pizza-placeholder">
+    <img src="images/cheese-lovers.jpg" alt="Cheese Lovers Pizza">
+</div>
+
+                            <button class="heart-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <div class="product-info">
+
+                            <div class="rating">
+                                ★★★★★
+                                <span>(72)</span>
+                            </div>
+
+                            <h3>Cheese Lovers</h3>
+
+                            <p>
+                                A cheesy combination of mozzarella,
+                                cheddar and parmesan.
+                            </p>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    From RM 21.90
+                                </strong>
+
+                                <button
+                                    class="add-cart-btn"
+                                    data-product="Cheese Lovers"
+                                    data-price="21.90"
+                                    data-category="Pizza"
+                                >
+                                    <i class="fa-solid fa-plus"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DEAL ================= -->
+        <section class="deal-section" id="deals">
+
+            <div class="deal-container">
+
+                <div class="deal-content">
+
+                    <span class="section-label">
+                        🔥 TODAY'S DEAL
+                    </span>
+
+                    <h2>
+                        More Pizza.<br>
+                        More Savings.
+                    </h2>
+
+                    <p>
+                        Grab our special combo and enjoy more
+                        of your favourite food for less.
+                    </p>
+
+                    <button class="deal-btn">
+                        View Deal
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+                <div class="deal-visual">
+                    🍕
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FOOTER ================= -->
+        <footer class="footer">
+
+            <div class="footer-container">
+
+                <div class="footer-brand">
+
+                    <a href="#" class="logo">
+                        <span class="logo-mark">🍕</span>
+                        <span>US <strong>PIZZA</strong></span>
+                    </a>
+
+                    <p>
+                        Great pizza. Great moments.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <div>
+                        <h4>Explore</h4>
+                        <a href="#menu">Menu</a>
+                        <a href="#deals">Deals</a>
+                        <a href="#ai-finder">AI Finder</a>
+                    </div>
+
+                    <div>
+                        <h4>Account</h4>
+                        <a href="login.html">Login</a>
+                        <a href="register.html">Register</a>
+                    </div>
+
+                    <div>
+                        <h4>Help</h4>
+                        <a href="#">Contact</a>
+                        <a href="#">FAQ</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 US Pizza Demo. Built for portfolio purposes.
+                </p>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+
+    <!-- CART DRAWER -->
+    <aside class="cart-drawer" id="cartDrawer">
+
+        <div class="cart-header">
+
+            <h2>Your Cart</h2>
+
+            <button id="closeCart">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+        <div class="cart-items" id="cartItems">
+
+            <div class="empty-cart">
+                <span>🛒</span>
+                <h3>Your cart is empty</h3>
+                <p>Add something delicious!</p>
+            </div>
+
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+                <span>Total</span>
+                <strong id="cartTotal">RM 0.00</strong>
+            </div>
+
+            <button class="checkout-btn">
+                Checkout
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <div class="overlay" id="overlay"></div>
+
+<!-- ================= PIZZA CUSTOMIZER ================= -->
+
+<div class="customizer-overlay" id="customizerOverlay">
+
+    <div class="customizer-modal">
+
+        <button class="customizer-close" id="customizerClose">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="customizer-image">
+            <img id="customizerImage" src="" alt="Pizza">
+        </div>
+
+        <div class="customizer-content">
+
+            <span class="section-label">CUSTOMIZE YOUR PIZZA</span>
+
+            <h2 id="customizerName">Pizza Name</h2>
+
+            <p class="customizer-description" id="customizerDescription">
+                Make it exactly the way you like it.
+            </p>
+
+
+            <!-- SIZE -->
+
+<div class="customizer-section" id="customizerOption1">
+
+                <h3>Choose your size</h3>
+
+                <div class="option-grid">
+
+                    <label class="option-card">
+
+                        <input
+                            type="radio"
+                            name="pizzaSize"
+                            value="Regular"
+                            data-price="0"
+                            checked
+                        >
+
+                        <span>
+                            <strong>Regular</strong>
+                            <small>10"</small>
+                        </span>
+
+                        <b>+ RM 0</b>
+
+                    </label>
+
+
+                    <label class="option-card">
+
+                        <input
+                            type="radio"
+                            name="pizzaSize"
+                            value="Large"
+                            data-price="5"
+                        >
+
+                        <span>
+                            <strong>Large</strong>
+                            <small>12"</small>
+                        </span>
+
+                        <b>+ RM 5</b>
+
+                    </label>
+
+
+                    <label class="option-card">
+
+                        <input
+                            type="radio"
+                            name="pizzaSize"
+                            value="XL"
+                            data-price="9"
+                        >
+
+                        <span>
+                            <strong>XL</strong>
+                            <small>14"</small>
+                        </span>
+
+                        <b>+ RM 9</b>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- CRUST -->
+
+<div class="customizer-section" id="customizerOption2">
+
+                <h3>Choose your crust</h3>
+
+                <div class="option-grid">
+
+                    <label class="option-card">
+
+                        <input
+                            type="radio"
+                            name="pizzaCrust"
+                            value="Original"
+                            data-price="0"
+                            checked
+                        >
+
+                        <span>
+                            <strong>Original</strong>
+                            <small>Classic crust</small>
+                        </span>
+
+                        <b>+ RM 0</b>
+
+                    </label>
+
+
+                    <label class="option-card">
+
+                        <input
+                            type="radio"
+                            name="pizzaCrust"
+                            value="Thin"
+                            data-price="2"
+                        >
+
+                        <span>
+                            <strong>Thin</strong>
+                            <small>Light & crispy</small>
+                        </span>
+
+                        <b>+ RM 2</b>
+
+                    </label>
+
+
+                    <label class="option-card">
+
+                        <input
+                            type="radio"
+                            name="pizzaCrust"
+                           value="Cheesy Crust"
+                            data-price="4"
+                        >
+
+                        <span>
+                            <strong>Cheesy Crust</strong>
+                            <small>Extra cheesy</small>
+                        </span>
+
+                        <b>+ RM 4</b>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- TOPPINGS -->
+
+<div class="customizer-section" id="customizerOption3">
+
+                <h3>Extra toppings</h3>
+
+                <div class="topping-list">
+
+                    <label class="topping-option">
+
+                        <span>
+
+                            <input
+                                type="checkbox"
+                                value="Extra Cheese"
+                                data-price="3"
+                            >
+
+                            Extra Cheese
+
+                        </span>
+
+                        <b>+ RM 3</b>
+
+                    </label>
+
+
+                    <label class="topping-option">
+
+                        <span>
+
+                            <input
+                                type="checkbox"
+                                value="Mushrooms"
+                                data-price="2"
+                            >
+
+                            Mushrooms
+
+                        </span>
+
+                        <b>+ RM 2</b>
+
+                    </label>
+
+
+                    <label class="topping-option">
+
+                        <span>
+
+                            <input
+                                type="checkbox"
+                                value="Jalapeño"
+                                data-price="2"
+                            >
+
+                            Jalapeño
+
+                        </span>
+
+                        <b>+ RM 2</b>
+
+                    </label>
+
+
+                    <label class="topping-option">
+
+                        <span>
+
+                            <input
+                                type="checkbox"
+                                value="Extra Chicken"
+                                data-price="4"
+                            >
+
+                            Extra Chicken
+
+                        </span>
+
+                        <b>+ RM 4</b>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUANTITY -->
+
+            <div class="customizer-bottom">
+
+                <div>
+
+                    <span class="quantity-label">
+                        Quantity
+                    </span>
+
+                    <div class="customizer-quantity">
+
+                        <button id="customizerMinus">
+                            −
+                        </button>
+
+                        <strong id="customizerQuantity">
+                            1
+                        </strong>
+
+                        <button id="customizerPlus">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="customizer-total">
+
+                    <span>Total</span>
+
+                    <strong id="customizerTotal">
+                        RM 0.00
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="customizer-add"
+                id="customizerAdd"
+            >
+                Add to Cart
+                <i class="fa-solid fa-cart-plus"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/ai.js"></script>
+    <script src="js/auth.js"></script>
+
+</body>
+</html>

@@ -1824,15 +1824,25 @@ a {
 }
 
 .customizer-modal {
-    width: 100%;
-    max-height: 96vh;
-    min-height: 0;
+    position: relative;
 
-    display: flex;
-    flex-direction: column;
+    width: min(900px, 100%);
+    max-height: 90vh;
+
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
 
     overflow: hidden;
-    border-radius: 18px;
+
+    background: white;
+
+    border-radius: 22px;
+
+    box-shadow: 0 30px 100px rgba(0, 0, 0, 0.3);
+
+    transform: translateY(20px) scale(0.97);
+
+    transition: 0.3s ease;
 }
 
 .customizer-overlay.active .customizer-modal {
@@ -2165,9 +2175,8 @@ a {
 }
 
 
-
 /* =========================================================
-   CUSTOMIZER MOBILE — RESPONSIVE FIX
+   CUSTOMIZER MOBILE — COMPACT
    ========================================================= */
 
 @media (max-width: 700px) {
@@ -2176,49 +2185,46 @@ a {
         padding: 8px;
         align-items: center;
         justify-content: center;
-        overflow: hidden;
     }
 
     .customizer-modal {
+        width: 100%;
+        max-height: 96vh;
+
         display: flex;
         flex-direction: column;
 
-        width: 100%;
-        max-height: calc(100vh - 16px);
-        max-height: calc(100dvh - 16px);
+        overflow-y: auto;
+        overflow-x: hidden;
 
-        overflow: hidden;
         border-radius: 18px;
     }
 
-    /* PIZZA IMAGE */
+    /* SMALLER PIZZA IMAGE */
     .customizer-image {
-        flex: 0 0 105px;
-        height: 105px;
-        min-height: 105px;
-        padding: 8px;
+        flex-shrink: 0;
+
+        min-height: 125px;
+        height: 125px;
+
+        padding: 10px;
     }
 
     .customizer-image img {
         width: 100%;
         height: 100%;
-        max-height: none;
+
+        max-height: 110px;
+
         object-fit: cover;
         border-radius: 12px;
     }
 
-    /* SCROLLABLE CONTENT */
+    /* COMPACT CONTENT */
     .customizer-content {
-        flex: 1;
-        min-height: 0;
-        overflow-y: auto;
-        overflow-x: hidden;
+        padding: 15px 16px 20px;
 
-        padding: 14px 16px 20px;
-
-            -webkit-overflow-scrolling: touch;
-    overscroll-behavior-y: contain;
-    touch-action: pan-y;
+        overflow: visible;
     }
 
     .customizer-content h2 {
@@ -2228,11 +2234,11 @@ a {
     }
 
     .customizer-description {
+        font-size: 10px;
         margin-top: 3px;
-        font-size: 11px;
     }
 
-    /* SIZE AND CRUST */
+    /* LESS SPACE BETWEEN SECTIONS */
     .customizer-section {
         margin-top: 14px;
     }
@@ -2242,28 +2248,29 @@ a {
         font-size: 12px;
     }
 
+    /* SMALLER SIZE / CRUST CARDS */
     .option-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 7px;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
     }
 
     .option-card {
-        min-height: 52px;
+        min-height: 55px;
         padding: 8px;
         border-radius: 8px;
     }
 
     .option-card strong {
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .option-card small {
-        font-size: 9px;
+        font-size: 8px;
     }
 
     .option-card b {
         margin-top: 4px;
-        font-size: 9px;
+        font-size: 8px;
     }
 
     .option-grid .option-card:last-child {
@@ -2272,31 +2279,30 @@ a {
 
     /* TOPPINGS */
     .topping-list {
-        gap: 6px;
+        gap: 5px;
     }
 
     .topping-option {
-        min-height: 42px;
-        padding: 9px 10px;
-        font-size: 11px;
-        border-radius: 8px;
+        padding: 8px 10px;
+        min-height: 34px;
+        font-size: 10px;
+        border-radius: 7px;
     }
 
     .topping-option b {
-        font-size: 10px;
+        font-size: 9px;
     }
 
-    /* QUANTITY AND TOTAL */
+    /* QUANTITY / TOTAL */
     .customizer-bottom {
         margin-top: 15px;
         padding-top: 12px;
         align-items: center;
-        gap: 10px;
     }
 
     .quantity-label {
         margin-bottom: 4px;
-        font-size: 10px;
+        font-size: 9px;
     }
 
     .customizer-quantity {
@@ -2304,45 +2310,22 @@ a {
     }
 
     .customizer-quantity button {
-        width: 36px;
-        height: 36px;
+        width: 27px;
+        height: 27px;
     }
 
     .customizer-total strong {
         font-size: 19px;
     }
 
-    /* ADD TO CART */
+    /* ADD BUTTON */
     .customizer-add {
-        width: 100%;
-        min-height: 48px;
-        height: auto;
+        height: 45px;
         margin-top: 12px;
         border-radius: 9px;
-        font-size: 12px;
-    }
-
-    .customizer-close {
-        top: 10px;
-        right: 10px;
-        width: 36px;
-        height: 36px;
+        font-size: 11px;
     }
 }
-
-/* SHORT PHONE / LANDSCAPE */
-@media (max-width: 700px) and (max-height: 500px) {
-    .customizer-overlay {
-        align-items: flex-start;
-    }
-
-    .customizer-image {
-        flex-basis: 75px;
-        height: 75px;
-        min-height: 75px;
-    }
-}
-
 /* =========================================================
    CHECKOUT PAGE
    ========================================================= */
@@ -3932,16 +3915,13 @@ a {
     }
 
     .cart-item-image img {
-        width: 100% !important;
-        height: 100% !important;
-
-        max-width: 100% !important;
-        max-height: 100% !important;
-
-        display: block;
-
-        object-fit: cover;
-    }
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: cover;
+    display: block;
+}
 
     .cart-item-info {
         flex: 1;
@@ -4129,13 +4109,5 @@ a {
 
     .remove-item {
         font-size: 11px !important;
-    }
-}
-@media (max-width: 700px) {
-    .menu-toggle {
-        position: relative;
-        z-index: 1001;
-        pointer-events: auto;
-        cursor: pointer;
     }
 }
